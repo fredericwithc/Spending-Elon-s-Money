@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>E se você tivesse o dinheiro do Elon Musk?</h1>
+
+        <!-- NOVO: Seletor de idiomas -->
+        <div class="seletor-idiomas">
+            <button class="botao-idioma active" onclick="trocarIdioma('pt-br')" id="btn-pt-br">
+                🇧🇷 PT
+            </button>
+            <button class="botao-idioma" onclick="trocarIdioma('en')" id="btn-en">
+                🇺🇸 EN
+            </button>
+        </div>
+
+        <div class="mensagem" id="mensagem">
+            <span>Vá a loucura e faça suas compras!</span>
+        </div>
+
+        <div class="status" id="status">
+            <div class="dinheiro" id="dinheiro"></div>
+        </div>
+
+        <div class="objetos">
+
+            <div class="objeto-wrapper">
+                <img src="./images/coca.png" alt="coca-cola">
+                <div class="objeto-nome">Lata de Coca-Cola</div>
+                <div class="objeto-custo">$2</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="./images/Cartas UNO.png" alt="Cartas UNO">
+                <div class="objeto-nome">Baralho UNO</div>
+                <div class="objeto-custo">$5</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="./images/A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg" alt="Livro">
+                <div class="objeto-nome">Livro</div>
+                <div class="objeto-custo">$15</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="./images/alexa.png" alt="Alexa">
+                <div class="objeto-nome">Alexa Echo Dot</div>
+                <div class="objeto-custo">$50</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="./images/airfryer.png" alt="Air fryer">
+                <div class="objeto-nome">Air Fryer</div>
+                <div class="objeto-custo">$75</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="./images/ferramentas.png" alt="Kit ferramenta completo">
+                <div class="objeto-nome">Kit de ferramentas completo</div>
+                <div class="objeto-custo">$100</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="./images/airpods.png" alt="AirPods">
+                <div class="objeto-nome">Apple AirPods</div>
+                <div class="objeto-custo">$130</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/tenis.png" alt="Nike Air Jordan">
+                <div class="objeto-nome">Nike Air Jordan 1 Retro High OG</div>
+                <div class="objeto-custo">$200</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/ps5.png" alt="Playstation 5 e 2 controles">
+                <div class="objeto-nome">PlayStation 5 com 2 controles</div>
+                <div class="objeto-custo">$500</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="images/swappie-iphone-15-pro-white-titanium.avif" alt="Iphone">
+                <div class="objeto-nome">Apple iPhone 15 Pro (128GB)</div>
+                <div class="objeto-custo">$1200</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/tv.png" alt="TV">
+                <div class="objeto-nome">TV Samsung Neo QLED 75”</div>
+                <div class="objeto-custo">$2000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/guitar.png" alt="Gibson">
+                <div class="objeto-nome">Guitarra Gibson ES-175</div>
+                <div class="objeto-custo">$7000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/moto.png" alt="Motocicleta">
+                <div class="objeto-nome">Motocicleta BMW S 1000 RR</div>
+                <div class="objeto-custo">$15000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/rolex.png" alt="Rolex">
+                <div class="objeto-nome">Rolex</div>
+                <div class="objeto-custo">$23000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/lancha.png" alt="Lancha">
+                <div class="objeto-nome">Lancha</div>
+                <div class="objeto-custo">$100000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/camarote.png" alt="Camarote UEFA">
+                <div class="objeto-nome">Camarote Final UEFA Champions League</div>
+                <div class="objeto-custo">$200000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/castelo.png" alt="Castelo">
+                <div class="objeto-nome">Castelo na França</div>
+                <div class="objeto-custo">$700000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/ferrari.png" alt="Ferrari">
+                <div class="objeto-nome">Ferrari 812 GTS 2025</div>
+                <div class="objeto-custo">$1300000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/batmovel.png" alt="Batmóvel">
+                <div class="objeto-nome">Batmóvel "Tumbler"</div>
+                <div class="objeto-custo">$3000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/super iate.png" alt="Super Yatch">
+                <div class="objeto-nome">Superiate Pershing 140</div>
+                <div class="objeto-custo">$5000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/ilha.jpg" alt="Ilha no Canadá">
+                <div class="objeto-nome">Strum Island - Canadá</div>
+                <div class="objeto-custo">$6800000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/tanque.png" alt="Tanque de Guerra">
+                <div class="objeto-nome">Tanque de Guerra</div>
+                <div class="objeto-custo">$8000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/jatinho.png" alt="Jatinho">
+                <div class="objeto-nome">Jatinho Grande</div>
+                <div class="objeto-custo">$45000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/noiteEstrelada.png" alt="Noite Estrelada">
+                <div class="objeto-nome">Noite Estrelada - Van Gogh</div>
+                <div class="objeto-custo">$100000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/cruzeiro.png" alt="Navio cruzeiro">
+                <div class="objeto-nome">Navio de Cruzeiro</div>
+                <div class="objeto-custo">$1500000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/b2-spirit.png" alt="b2-spirit">
+                <div class="objeto-nome">B2-Spirit</div>
+                <div class="objeto-custo">$2000000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/real madrid.png" alt="Logo Real Madrid">
+                <div class="objeto-nome">Clube de Futebol Real Madrid</div>
+                <div class="objeto-custo">$6700000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="images/new england patriots.png" alt="Logo Patriots">
+                <div class="objeto-nome">Clube de Futebol Americano New England Patriots</div>
+                <div class="objeto-custo">$7400000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+            <div class="objeto-wrapper">
+                <img src="/images/golden-state-warriors.png" alt="Logo Golden State Warriors">
+                <div class="objeto-nome">Clube de Basquete Golden State Warriors</div>
+                <div class="objeto-custo">$9400000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+
+
+            <div class="objeto-wrapper">
+                <img src="/images/twitter.png" alt="Logo Twitter">
+                <div class="objeto-nome">Twitter</div>
+                <div class="objeto-custo">$44000000000</div>
+                <div class="objeto-botoes">
+                    <button class="botao-sell">Vender</button>
+                    <input type="number" value="0" class="objeto-input">
+                    <button class="botao-buy">Comprar</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <br>
+
+        <button class="botao-reset" onclick="resetarJogo()">
+            Reset
+        </button>
+
+        <div class="historico" id="historico" style="display: none;">
+            <h3>Histórico de Compras</h3>
+            <div id="listaHistorico"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

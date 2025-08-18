@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background: linear-gradient(135deg, #F4D793 0%, #f3d48c 50%, #f8cc65 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #889E73;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+input {
+    max-width: 70px;
+    border: solid 1px #F4D793;
+    font-size: 1rem;
+    padding: 3px;
+    text-align: center;
+}
+
+/* SELETOR IDIOMAS */
+.seletor-idiomas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.botao-idioma {
+    background: #F4D793;
+    border: 2px solid #889E73;
+    color: #889E73;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.botao-idioma:hover {
+    background: #889E73;
+    color: #FFF6DA;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(136, 158, 115, 0.3);
+}
+
+.botao-idioma.active {
+    background: #889E73;
+    color: #FFF6DA;
+    box-shadow: 0 4px 15px rgba(136, 158, 115, 0.4);
+}
+
+.container {
+    background: #FFF6DA;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.objetos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 50px 50px;
+}
+
+.objeto-wrapper {
+    background-color: #F4D793;
+    border-radius: 15px;
+    height: 300px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.objeto-wrapper img {
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.objeto-nome {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.objeto-custo {
+    font-size: 1.3rem;
+    color: #A94A4A;
+    font-weight: bold;
+}
+
+.objeto-botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.status {
+    background: #f5ecd4;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 2px solid #649e2e;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+.dinheiro {
+    font-size: 1.8em;
+    color: #649e2e;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.botao-buy {
+    background-color: #889E73;
+    color: #FFF6DA;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.botao-buy:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(136, 158, 115, 0.4);
+}
+
+.botao-buy:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.botao-sell {
+    background-color: #A94A4A;
+    color: #FFF6DA;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.botao-sell:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(169, 74, 74, 0.4);
+}
+
+.botao-sell:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.botao-reset {
+    background: linear-gradient(45deg, #889E73, #73994f);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.botao-reset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(136, 158, 115, 0.3);
+}
+
+.mensagem {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A94A4A;
+}
+
+.historico {
+    text-align: left;
+    margin-top: 20px;
+    padding: 15px;
+    background: #F4D793;
+    border-radius: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.historico h3 {
+    color: #889E73;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.historico-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9em;
+    color: #929ea8;
+}
+
+@keyframes compra {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animacao-compra {
+    animation: compra 0.3s ease;
+}
+
+
+/* RESPONSIVIDADE PARA TELAS MENORES */
+
+/* Laptops e monitores médios (769px a 1440px) */
+@media (min-width: 769px) and (max-width: 1440px) {
+    .container {
+        max-width: 1000px;
+        padding: 25px;
+    }
+
+    .objetos {
+        grid-gap: 20px 20px;
+    }
+
+    .objeto-wrapper {
+        height: 280px;
+        padding: 12px;
+    }
+
+    .objeto-wrapper img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .objeto-botoes {
+        gap: 8px;
+    }
+
+    .botao-buy,
+    .botao-sell {
+        padding: 8px 10px;
+        font-size: 0.8em;
+        margin: 1px;
+    }
+
+    input {
+        width: 60px;
+        font-size: 0.9em;
+    }
+}
+
+/* Tablets (768px e abaixo) */
+@media (max-width: 768px) {
+    .objetos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px 30px;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .objeto-wrapper {
+        height: 280px;
+    }
+}
+
+/* Celulares (480px e abaixo) */
+@media (max-width: 480px) {
+    .objetos {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .objeto-wrapper {
+        height: 320px;
+        padding: 10px;
+    }
+
+    .objeto-wrapper img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .objeto-botoes {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .botao-buy,
+    .botao-sell {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        margin: 0;
+        width: 100%;
+        max-width: 150px;
+    }
+
+    input {
+        width: 80px;
+        padding: 8px;
+        margin: 0;
+    }
+
+    .dinheiro {
+        font-size: 1.4em;
+    }
+
+    .status {
+        padding: 15px;
+        margin: 10px 0;
+    }
+}
