@@ -1,4 +1,4 @@
-# Spending-Elon-s-Money
+# Spending-Elon-s-Money / EN
 
 A fun way to be rich, poor and kind of angry. What if you had Elon Musk money? It's just crazy to consider it.  
 
@@ -46,7 +46,7 @@ Linkedin: https://www.linkedin.com/in/frederic-leyenberger/
 
 ---------------------------------------------------------------------------------------
 
-# Gastando-o-Dinheiro-do-Elon
+# Gastando-o-Dinheiro-do-Elon / PT-BR
 
 Uma forma divertida de ser rico, pobre e de te deixar com um pouco de raiva. E se você tivesse o dinheiro do Elon Musk? É simplesmente insano considerar isso.
 
