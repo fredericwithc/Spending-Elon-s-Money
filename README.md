@@ -64,7 +64,7 @@ Simulador interativo que permite aos usuários "comprar" itens com um orçamento
 Funcionalidades
 
 - Rastreamento de orçamento em tempo real com animações
-- Suporte multilíngue (Português/Inglês)
+- Suporte bilíngue (Português/Inglês)
 - Histórico de compras com timestamps
 - Sistema de input inteligente (compras em massa + compras incrementais)
 - Funcionalidade de compra/venda com reembolso total
